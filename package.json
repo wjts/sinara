@@ -1,0 +1,29 @@
+{
+  "name": "sinara",
+  "version": "1.0.0",
+  "description": "Flexible NextGen Project Management Web Tool",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "NODE_ENV=test mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
+  },
+  "author": "Wojciech 'Wojtas' Wojciechowski",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "lodash": "^4.17.4",
+    "mongodb": "^3.0.1",
+    "mongoose": "^4.13.9",
+    "validator": "^9.2.0"
+  },
+  "devDependencies": {
+    "expect": "^22.0.6",
+    "mocha": "^4.1.0",
+    "nodemon": "^1.14.11",
+    "supertest": "^3.0.0"
+  }
+}
