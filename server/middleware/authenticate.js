@@ -8,8 +8,8 @@ var authenticate = (req, res, next) => {
       return Promise.reject();
     }
 
-    req.user = user;
-    req.token = token;
+    res.locals.user = user;
+    res.locals.token = token;
     next();
   }).catch((e) => {
     res.status(401).send();
