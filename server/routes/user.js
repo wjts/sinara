@@ -14,7 +14,11 @@ router.post('/users', (req, res) => {
   }).then((token) => {
     res.header('x-auth', token).send(user);
   }).catch((e) => {
-    res.status(400).send(e);
+    if (e.code === 11000) {
+      res.status(400).send({message: 'An account already exists with that email.'});
+    } else {
+      res.status(400).send({message: e.message || e.errmsg});
+    }
   })
 });
 
