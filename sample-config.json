@@ -1,0 +1,12 @@
+{
+    "test": {
+        "PORT": 3000,
+        "MONGODB_URI": "mongodb://mongo:27017/SinaraTest",
+        "JWT_SECRET": "notsosecretsochangeit1"
+    },
+    "development": {
+        "PORT": 3000,
+        "MONGODB_URI": "mongodb://mongo:27017/Sinara",
+        "JWT_SECRET": "notsosecretsochangeit2"
+    }
+}
