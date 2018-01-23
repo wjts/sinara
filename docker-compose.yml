@@ -4,11 +4,8 @@ services:
   node:
     image: node:9-alpine
     working_dir: /home/node/app
-    ports:
-      - '80:3000'
     volumes:
       - '.:/home/node/app/'
       - './sample-config.json:/home/node/app/server/config/config.json:ro'
-    command: sh -c "npm install && npm install -g nodemon && npm run start-watch"
   mongo:
     image: mongo

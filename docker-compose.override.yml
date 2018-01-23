@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  node:
+    ports:
+      - '80:3000'
+    command: sh -c "npm install && npm install -g nodemon && npm run start-watch"
+  mongo:
+    ports:
+      - '27017:27017'

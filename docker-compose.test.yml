@@ -1,0 +1,6 @@
+version: '2'
+
+services:
+  node:
+    command: sh -c "npm install && npm install -g nodemon && npm run test-watch"
+
