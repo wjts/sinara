@@ -9,6 +9,7 @@ var app = express();
 app.use(bodyParser.json());
 
 app.use(require('./routes/user'));
+app.use(require('./routes/sprint'));
 
 app.use(require('./routes/error-handler'));
 
